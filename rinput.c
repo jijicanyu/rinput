@@ -33,10 +33,11 @@ int main(int argc, char *argv[])
 	struct rinput_event revent;
 	struct sockaddr_in saddr;
 
-	if((4>argc) && (13<=argc))
+	if((4>argc) || (13<=argc))
 	{
 		printf("Usage: %s address port event_device ... (<=10)\n",
 					argv[0]);
+		return 0;
 	}
 
 	/* Create socket */
